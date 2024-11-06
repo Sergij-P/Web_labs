@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+</html>
+<body>
+    <script>
+        function myFunction()
+        {
+    const x = Number(prompt("Type first number"));
+    const oper = prompt("Type an operator (+, -, *, /)");
+    const y = Number(prompt("Type second number"));
+    let result;
+    switch (oper) {
+        case "+":
+            result = x + y;
+            break;
+        case "-":
+            result = x - y;
+            break;
+        case "*":
+            result = x * y;
+            break;
+        case "/":
+            if (y === 0)
+            {
+                alert("Error: Cannot divide by zero.");
+                return;
+            }
+            result = x / y;
+            break;
+        default:
+            alert("Invalid operator! Please use +, -, *, or /");
+            return;
+    }
+    alert("Result: " + result);
+    window.close();
+    }
+    window.onload = myFunction;
+    </script>
+</body>
