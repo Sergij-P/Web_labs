@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+</head>
+<body>
+    <script>
+        let balance = 100;
+        const randomNumbers = 5;
+        const maxTries = 3;
+        const rewards = [40, 20, 10];
+        function guessNumber()
+        {
+            for (let i = 0; i < maxTries; i++)
+            {
+                const userGuess = parseInt(prompt('Вибери число від 1 до 5'));
+                const randomNumber = Math.floor(Math.random() * randomNumbers) + 1;
+
+                if (userGuess === randomNumber)
+                {
+                    balance += rewards[i]; // Додаємо до балансу
+                    alert(`Ви вгадали число ${randomNumber}!`);
+                    return;
+                } else {
+                    balance -= 20;
+                    alert(`Ви не вгадали! Ваш баланс ${balance}`);
+                }
+                if (balance <= 0)
+                {
+                    alert('Гра закінчилася. Ваш баланс вичерпано :(');
+                    return;
+                }
+            }
+            alert('Гра закінчилася...');
+        }
+        guessNumber();
+    </script>
+</body>
+</html>
