@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук Роботи</title>
+    <link rel="stylesheet" href="Black and White.css">
+</head>
+<body>
+    <header>
+        <h1>Пошук Роботи</h1>
+        <div class="search-bar">
+            <input type="text" id="job-search" placeholder="Пошук за назвою роботи, компанією">
+        </div>
+    </header>
+    <section class="filters">
+        <button class="filter-button" data-filter="Full-time">Повний робочий день</button>
+        <button class="filter-button" data-filter="Part-time">Неповний робочий день</button>
+        <button class="filter-button" data-filter="Remote">Віддалено</button>
+    </section>
+    <main id="job-list">
+    </main>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    renderJobs(jobs);
+    document.getElementById('job-search').addEventListener('input', filterJobs);
+    document.querySelectorAll('.filter-button').forEach(button =>
+    {
+           button.addEventListener('click', () => toggleFilter(button));
+        });
+    });
+    let activeFilters = [];
+    function toggleFilter(button)
+    {
+        const filterValue = button.getAttribute('data-filter');
+        if (activeFilters.includes(filterValue))
+        {
+            activeFilters = activeFilters.filter(f => f !== filterValue);
+            button.classList.remove('active');
+        } else
+        {
+            activeFilters.push(filterValue);
+            button.classList.add('active');
+        }
+        filterJobs();
+    }
+    function filterJobs()
+    {
+        const searchQuery = document.getElementById('job-search').value.toLowerCase();
+        const filteredJobs = jobs.filter(job =>
+        {
+            const matchesSearch = job.title.toLowerCase().includes(searchQuery);
+            const matchesFilter = activeFilters.length === 0 || activeFilters.includes(job.type);
+            return matchesSearch && matchesFilter;
+        });
+        renderJobs(filteredJobs);
+    }
+    </script> 
+</body>
+</html>
+<!-- Ледве скрипт написав для того :( і то впевнений шо він не ідеальний-->
