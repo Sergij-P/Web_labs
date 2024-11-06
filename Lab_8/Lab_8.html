@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <style>
+        .file-manager {
+            font-family: Arial, sans-serif;
+            max-width: 3000px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .folder, .file {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .folder::before {
+            content: "📁";
+            margin-right: 8px;
+        }
+        .file::before {
+            content: "📝";
+            margin-right: 8px;
+        }
+        .nested {
+            display: none;
+        }
+        .folder.open .nested {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="file-manager">
+        <ul>
+            <li class="folder" onclick="toggleFolder(this)">Films
+                <ul class="nested">
+                    <li class="file">Iron_Man</li>
+                    <li class="folder" onclick="toggleFolder(this)">Fantasy
+                        <ul class="nested">
+                            <li class="file">The_Lord_of_the_Rings</li>
+                            <li class="folder" onclick="toggleFolder(this)">New Folder 1
+                                <ul class="nested">
+                                    <li class="file">Folder is empty, create some files!</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="folder" onclick="toggleFolder(this)">Some silly documents
+                <ul class="nested">
+                    <li class="file">Folder is empty, find a job!</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        function toggleFolder(element)
+        {
+            element.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
