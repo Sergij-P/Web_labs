@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.hero {
+    background: url(images/apples.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 10px 0 30px;
+}
+
+.hero button {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 12px 24px;
+    border: 2px solid #fff;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.featured-articles {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured-articles h2 span {
+    color: #b38575;
+}
+
+.featured-articles article {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.featured-articles img {
+    width: 500px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.newsletter {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.newsletter h2 span {
+    color: #b38575;
+}
+
+.newsletter form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #b38575;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.footer-info h3 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #222;
+    color: #ccc;
+}

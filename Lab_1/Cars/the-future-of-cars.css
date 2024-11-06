@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+body 
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #333333;
+}
+header 
+{
+    background: url(images/car-future.jpg);
+    height: 1100px;
+    width: 100%;
+}
+    header h1 
+    {
+        font-size: 80px;
+        font-weight: 20;
+        color: #b38575;
+        text-transform: uppercase;
+        padding: 80px 0 0 20px; /*робить текст нижче на 20пікс*/
+        text-align: left;
+    }
+nav 
+{
+    float: right; /*робить навігаціне меню справа*/
+}
+    nav ul 
+    {
+        padding: 7px; /*робить місце між текстом і крч більш нижче*/
+        line-height: 20px; /*робить текст 20пікселів в висоту*/
+    }
+        nav ul li 
+        {
+            display: inline-block;
+        }
+
+    nav a,
+    nav a:link,
+    nav a:active,
+    nav a:visited 
+    {
+        text-transform: uppercase;
+        color: #333;
+        font-size: 1em;
+        font-weight: bold;
+        padding: 5px 7px 10px 7px;
+        text-decoration: none;
+    }
+
+        nav a:hover 
+        {
+            color: #b38575;
+        }
+
+.content section 
+{
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: justify;
+}
+
+article 
+{
+    margin-bottom: 20px;
+}
+
+    article img 
+    {
+        width: 350px;
+        height: 260px;
+        margin-right: 15px;
+        float: left;
+    }
+
+    article h2
+    {
+        color: #b38575;
+        font-weight: 90;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    article p 
+    {
+        font-size: 18px;
+        color: #333333;
+        padding: 20px;
+    }
+
+        article p:first-of-type:first-letter 
+        {
+            font-size: 32px;
+            font-weight: bold;
+            color: #b38575;
+            text-transform: uppercase;
+        }
+
+    article:after 
+    {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+footer 
+{
+    background-color: #ccc;
+}
+    footer span 
+    {
+        text-align: center;
+        display: block;
+        color: #333333;
+        padding: 10px;
+    }

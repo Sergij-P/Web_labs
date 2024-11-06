@@ -1,0 +1,106 @@
+/* Загальні стилі для сторінки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #0a1223;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header ul {
+    list-style-type: none;
+    padding: 10px;
+    text-align: right;
+  }
+  
+  header ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px;
+  }
+  
+  header ul li a:hover
+  {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .h1 {
+    text-align: center;
+    font-size: 2.5em;
+    -webkit-background-clip: text;
+    margin-bottom: 30px;
+  }
+  
+  /* Стилі для блоків з фактами */
+  .col, .col1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .col1 {
+    flex-direction: row-reverse;
+  }
+  
+  .text {
+    width: 60%;
+  }
+  
+  img {
+    border-radius: 10px;
+    width: 35%;
+    height: auto;
+  }
+  
+  /* Адаптивні стилі */
+  @media (max-width: 768px) {
+    .col, .col1 {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .col1 {
+      flex-direction: column;
+    }
+  
+    .text {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media (max-width: 500px) {
+    img {
+      filter: brightness(0) invert(1); /* Змінює колір на білий */
+    }
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(white, #303030);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  p {
+    line-height: 1.5;
+    font-size: 0.8em;
+    color:#5d5d5d;
+  }  
