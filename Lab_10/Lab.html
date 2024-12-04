@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <style>
+        .file-manager {
+            font-family: Arial, sans-serif;
+            max-width: 3000px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .folder, .file {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .folder::before {
+            content: "\1F4C1";
+            margin-right: 8px;
+        }
+        .file::before {
+            content: "\1F4C4";
+            margin-right: 8px;
+        }
+        .nested {
+            display: none;
+        }
+        .folder.open .nested {
+            display: block;
+        }
+        .folder.open::after {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="file-manager">
+        <ul>
+            <li class="folder" onclick="toggleFolder(this)">Films
+                <ul class="nested">
+                    <li class="file">Iron_Man.avi</li>
+                    <li class="folder" onclick="toggleFolder(this)">Fantasy
+                        <ul class="nested">
+                            <li class="file">The_Lord_of_the_Rings.avi</li>
+                            <li class="folder" onclick="toggleFolder(this)">New Folder 1
+                                <ul class="nested">
+                                    <li class="file">Folder is empty</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="folder" onclick="toggleFolder(this)">Documents
+                <ul class="nested">
+                    <li class="file">Folder is empty</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleFolder(element) {
+            element.classList.toggle("open");
+            event.stopPropagation(); // Я пробував зробити так щоб не відкривалтсь всі папки, але я не зміг :(
+        }
+    </script>
+</body>
+</html>
