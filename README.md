@@ -6,6 +6,7 @@ https://github.com/Sergij-P/Web_labs/tree/main/lab_2 - 2 lab
 
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_3 - 3 lab
 P.S. Without pictures, I lost them :( I will add them later
+
 null - 4 lab
 
 null - 5 lab
@@ -26,5 +27,6 @@ https://github.com/Sergij-P/Web_labs/tree/main/Lab_12 - 12 lab
 
 null - 13 lab
 P.S. Still WIP
+
 null - 14 lab
 P.S. Still WIP
