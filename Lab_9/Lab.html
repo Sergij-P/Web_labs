@@ -1,0 +1,130 @@
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #0883ff;
+        }
+
+        .Board {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-gap: 30px;
+        }
+
+        .Cards {
+            width: 100px;
+            background-color: #ecf0f1;
+            display: flex;
+            border: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: black;
+            height: 100px;
+            border-radius: 3px;
+        }
+
+        #Resetik {
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="Board"></div>
+    <button id="Resetik">Reset the game</button>
+    <label for="Pairs">Number of Cards's pairs:<input type="number" id="Pairs" value="4" min="2" max="10"></label>
+    <p id="Counter">Tries: 0</p>
+
+    <script>
+        const Cards = [
+        '5', '5',
+        '4', '4',
+        '3', '3',
+        '2', '2',
+        '1', '1'
+        ];
+        let firstCards = null;
+        let secondCards = null;
+        let lockBoard = false;
+        let stepCount = 0;
+        const Board = document.querySelector('.Board');
+        const Counter = document.getElementById('Counter');
+        const Reset = document.getElementById('Resetik');
+        const Count = document.getElementById('Pairs');
+        function Peretasunok(array) {
+        for (let i = array.length - 1; i > 0; i--)
+        {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+        }
+        }
+        function Creator() {
+        Board.innerHTML = ''; // :( я так над тим запарився шо не можу
+        stepCount = 0;
+        Update();
+        const pairCount = parseInt(Count.value);
+        const selectedCardss = Cards.slice(0, pairCount * 2);
+        Peretasunok(selectedCardss);
+        selectedCardss.forEach(Cards => {
+        const CardsElement = document.createElement('div');
+        CardsElement.classList.add('Cards');
+        CardsElement.dataset.icon = Cards;
+        CardsElement.addEventListener('click', Fliper);
+        Board.appendChild(CardsElement);
+        });
+        }
+        function Update() {
+        Counter.textContent = `Tries: ${stepCount}`;
+        }
+        function Fliper() {
+        if (lockBoard || this === firstCards || this.classList.contains('flipped')) return;
+        this.classList.add('flipped');
+        this.textContent = this.dataset.icon;
+        if (!firstCards)
+        {
+        firstCards = this;
+        } else 
+        {
+        secondCards = this;
+        stepCount++;
+        Update();
+        Cheker();
+        }
+        }
+        function Cheker() {
+        if (firstCards.dataset.icon === secondCards.dataset.icon) {
+        lockMatchedCardss();
+        } else {
+        unflipCardss();
+        }
+        }
+        function lockMatchedCardss() {
+        [firstCards, secondCards].forEach(Cards => Cards.removeEventListener('click', Fliper));
+        resetBoard();
+        }
+        function unflipCardss() {
+        lockBoard = true;
+        setTimeout(() => {
+        [firstCards, secondCards].forEach(Cards => {
+        Cards.classList.remove('flipped');
+        Cards.textContent = '';
+        });
+        resetBoard();
+        }, 1000);
+        }
+        function resetBoard() {
+        [firstCards, secondCards, lockBoard] = [null, null, false];
+        }
+        Reset.addEventListener('click', Creator);
+        Creator();
+    </script>
+</body>
+</html>
