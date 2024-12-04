@@ -1,5 +1,7 @@
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_1/Cars -
+
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_1/Food - 1 lab
+
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_1/Japan -
 
 https://github.com/Sergij-P/Web_labs/tree/main/lab_2 - 2 lab
