@@ -27,7 +27,7 @@ https://github.com/Sergij-P/Web_labs/tree/main/Lab_11 - 11 lab
 
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_12 - 12 lab
 
-null - 13 lab
+(https://github.com/Sergij-P/Web_labs/tree/main/Lab_13) - 13 lab
 P.S. Still WIP
 
 null - 14 lab
