@@ -21,14 +21,13 @@ https://github.com/Sergij-P/Web_labs/tree/main/Lab_8 - 8 lab
 
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_9 - 9 lab
 
-https://github.com/Sergij-P/Web_labs/tree/main/Lab_10 - 10 lab
+https://github.com/Sergij-P/Web_labs/tree/main/Lab_10 - 10 lab WIP
 
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_11 - 11 lab
 
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_12 - 12 lab
 
 (https://github.com/Sergij-P/Web_labs/tree/main/Lab_13) - 13 lab
-P.S. Still WIP
 
 null - 14 lab
 P.S. Still WIP
