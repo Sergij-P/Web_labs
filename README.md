@@ -1,10 +1,10 @@
 https://sergij-p.github.io/Web_labs/Lab_1/Cars/the-future-of-cars.html -|
 
-https://github.com/Sergij-P/Web_labs/tree/main/Lab_1/Food - 1 lab
+https://sergij-p.github.io/Web_labs/Lab_1/Food/food-page.html - 1 lab
 
-https://github.com/Sergij-P/Web_labs/tree/main/Lab_1/Japan -|
+https://sergij-p.github.io/Web_labs/Lab_1/Japan/japanese-kitchen.html -|
 
-https://github.com/Sergij-P/Web_labs/tree/main/lab_2 - 2 lab
+https://sergij-p.github.io/Web_labs/lab_2 - 2 lab
 
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_3 - 3 lab
 P.S. Without pictures, I lost them :( I will add them later
