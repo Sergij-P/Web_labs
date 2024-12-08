@@ -21,6 +21,39 @@
     <main id="job-list">
     </main>
     <script>
+        const jobs = [
+    {
+        title: "Програміст C++",
+        company: "TechCorp",
+        location: "Київ, Україна",
+        type: "Full-time"
+    },
+    {
+        title: "Графічний дизайнер",
+        company: "Creative Studio",
+        location: "Львів, Україна",
+        type: "Part-time"
+    },
+    {
+        title: "Менеджер з продажу",
+        company: "SalesPro",
+        location: "Дніпро, Україна",
+        type: "Full-time"
+    },
+    {
+        title: "Тестувальник програмного забезпечення",
+        company: "TestLab",
+        location: "Харків, Україна",
+        type: "Remote"
+    },
+    {
+        title: "Інженер DevOps",
+        company: "CloudWorks",
+        location: "Віддалено",
+        type: "Remote"
+    }
+];
+
     document.addEventListener('DOMContentLoaded', () => {
     renderJobs(jobs);
     document.getElementById('job-search').addEventListener('input', filterJobs);
@@ -55,6 +88,21 @@
         });
         renderJobs(filteredJobs);
     }
+    function renderJobs(jobList) {
+    const jobContainer = document.getElementById('job-list');
+    jobContainer.innerHTML = '';
+    jobList.forEach(job => {
+        const jobElement = document.createElement('div');
+        jobElement.classList.add('job-item');
+        jobElement.innerHTML = `
+            <h2>${job.title}</h2>
+            <p><strong>Компанія:</strong> ${job.company}</p>
+            <p><strong>Місцезнаходження:</strong> ${job.location}</p>
+            <p><strong>Тип роботи:</strong> ${job.type}</p>
+        `;
+        jobContainer.appendChild(jobElement);
+    });
+}
     </script> 
 </body>
 </html>
