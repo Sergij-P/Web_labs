@@ -1,4 +1,4 @@
-https://sergij-p.github.io/Web_labs/Lab_1/Cars/ -|
+https://sergij-p.github.io/Web_labs/Lab_1/Cars/the-future-of-cars.html -|
 
 https://github.com/Sergij-P/Web_labs/tree/main/Lab_1/Food - 1 lab
 
