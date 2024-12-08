@@ -51,9 +51,7 @@ class Map {
                 this.markPoint(x, y);
                 stepsTaken++;
             }
-
             this.render();
-
             if (stepsTaken >= steps) {
                 clearInterval(interval);
                 setTimeout(() => alert("Simulation complete!"), 100);
