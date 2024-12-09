@@ -28,5 +28,3 @@ https://sergij-p.github.io/Web_labs/lab_11/Index.html - 11 lab
 https://sergij-p.github.io/Web_labs/lab_12/Index.html - 12 lab
 
 https://sergij-p.github.io/Web_labs/lab_13/index.html - 13 lab
-
-https://sergij-p.github.io/Web_labs/coursework_web/index.html - курсова
