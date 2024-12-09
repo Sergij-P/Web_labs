@@ -7,7 +7,6 @@ https://sergij-p.github.io/Web_labs/Lab_1/Japan/Index.html -|
 https://sergij-p.github.io/Web_labs/lab_2/Index.html - 2 lab
 
 https://sergij-p.github.io/Web_labs/lab_3/Index.html - 3 lab
-P.S. Without pictures, I lost them :( I will add them later
 
 null - 4 lab
 
