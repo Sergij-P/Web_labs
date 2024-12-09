@@ -13,7 +13,7 @@ null - 4 lab
 
 null - 5 lab
 
-https://sergij-p.github.io/Web_labs/Lab_6/Inex.html - 6 lab
+https://sergij-p.github.io/Web_labs/Lab_6/Index.html - 6 lab
 
 https://sergij-p.github.io/Web_labs/Lab_7/Index.html - 7 lab
 
