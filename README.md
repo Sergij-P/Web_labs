@@ -21,7 +21,7 @@ https://sergij-p.github.io/Web_labs/Lab_8/Lab_8.html - 8 lab
 
 https://sergij-p.github.io/Web_labs/Lab_9/Lab.html - 9 lab
 
-https://sergij-p.github.io/Web_labs/Lab_10/index.html - 10 lab WIP
+https://sergij-p.github.io/Web_labs/Lab_10/Index.html - 10 lab WIP
 
 https://sergij-p.github.io/Web_labs/Lab_11/Lab.html - 11 lab
 
