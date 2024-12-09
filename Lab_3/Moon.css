@@ -86,7 +86,7 @@
       height: auto;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 728px) {
     img {
       filter: brightness(0) invert(1); /* Змінює колір на білий */
     }
