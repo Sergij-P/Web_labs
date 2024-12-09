@@ -17,17 +17,17 @@ header
         font-weight: 20;
         color: #b38575;
         text-transform: uppercase;
-        padding: 80px 0 0 20px; /*робить текст нижче на 20пікс*/
+        padding: 80px 0 0 20px;
         text-align: left;
     }
 nav 
 {
-    float: right; /*робить навігаціне меню справа*/
+    float: right;
 }
     nav ul 
     {
-        padding: 7px; /*робить місце між текстом і крч більш нижче*/
-        line-height: 20px; /*робить текст 20пікселів в висоту*/
+        padding: 7px;
+        line-height: 20px;
     }
         nav ul li 
         {
