@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Manager</title>
-    <style>
-        .file-manager {
-            font-family: Arial, sans-serif;
-            max-width: 3000px;
-            padding: 10px;
-            border: 1px solid black;
-            border-radius: 5px;
-        }
-        .folder, .file {
-            margin-left: 20px;
-            cursor: pointer;
-        }
-        .folder::before {
-            content: "📁";
-            margin-right: 8px;
-        }
-        .file::before {
-            content: "📝";
-            margin-right: 8px;
-        }
-        .nested {
-            display: none;
-        }
-        .folder.open .nested {
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .file-manager {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      width: 300px;
+    }
+    
+    h2 {
+      text-align: center;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    li {
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    
+    .folder {
+      font-weight: bold;
+    }
+    
+    .hidden {
+      display: none;
+    }
+
+    .file, .folder {
+      margin-left: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="file-manager">
-        <ul>
-            <li class="folder" onclick="toggleFolder(this)">Films
-                <ul class="nested">
-                    <li class="file">Iron_Man</li>
-                    <li class="folder" onclick="toggleFolder(this)">Fantasy
-                        <ul class="nested">
-                            <li class="file">The_Lord_of_the_Rings</li>
-                            <li class="folder" onclick="toggleFolder(this)">New Folder 1
-                                <ul class="nested">
-                                    <li class="file">Folder is empty, create some files!</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder" onclick="toggleFolder(this)">Some silly documents
-                <ul class="nested">
-                    <li class="file">Folder is empty, find a job!</li>
-                </ul>
-            </li>
+  <div class="file-manager">
+    <h2>File Manager</h2>
+    <ul>
+      <li class="folder" onclick="toggleSubFiles('1-sub')">📁 Films
+        <ul id="1-sub" class="hidden">
+          <li class="folder" onclick="toggleSubFiles('sub-1')">📁 Fantasy
+            <ul id="sub-1" class="hidden">
+              <li class="file">📄 Pepsi Man!!!</li>
+            </ul>
+          </li>
+          <li class="file">📄 Iron Man</li>
         </ul>
-    </div>
-    <script>
-        function toggleFolder(element)
-        {
-            element.classList.toggle("open");
-        }
-    </script>
+      </li>
+      <li class="folder" onclick="toggleSubFiles('2-sub')">📁 Some silly documents
+        <ul id="2-sub" class="hidden">
+          <li class="file">This folder is empty, find a job!</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleSubFiles(id) {
+      const element = document.getElementById(id);
+      element.classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
