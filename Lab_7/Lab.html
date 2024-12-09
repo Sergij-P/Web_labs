@@ -4,35 +4,37 @@
 </head>
 <body>
     <script>
-        let balance = 60;
-        const randomNumbers = 5;
-        const maxTries = 3;
-        const rewards = [40, 20, 10];
-        function guessNumber()
-        {
-            for (let i = 0; i < maxTries; i++)
-            {
-                const userGuess = parseInt(prompt('Вибери число від 1 до 5'));
-                const randomNumber = Math.floor(Math.random() * randomNumbers) + 1;
-
-                if (userGuess === randomNumber)
-                {
-                    balance += rewards[i]; // Додаємо до балансу
-                    alert(`Ви вгадали число ${randomNumber}!`);
-                    return;
-                } else {
-                    balance -= 20;
-                    alert(`Ви не вгадали! Ваш баланс ${balance}`);
-                }
-                if (balance <= 0)
-                {
-                    alert('Гра закінчилася. Ваш баланс вичерпано :(');
-                    return;
-                }
+        function startGame() {
+    let balance = 100;
+    alert("Ваш початковий баланс: $" + balance);
+    while (balance >= 20) {
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        let attempts = 3;
+        while (attempts > 0) {
+            let guess = parseInt(prompt("Вгадайте число від 1 до 10. У вас " + attempts + " спроби:"));
+            if (guess === randomNumber) {
+                alert("Вітаємо! Ви вгадали число: " + randomNumber);
+                balance += 10;
+                break;
+            } else {
+                attempts--;
+                balance -= 5;
+                alert("Неправильно вгадане число! Залишилося спроб: " + attempts);
             }
-            alert('Гра закінчилася...');
         }
-        guessNumber();
+        if (attempts === 0) {
+            alert("Ви вичерпали всі спроби. Загадане число було: " + randomNumber);
+        }
+        if (balance < 20) {
+            alert("Ваш баланс недостатній, дякуємо за гру!");
+            break; 
+        }
+        alert("Ваш поточний баланс: $" + balance + ". Починаємо новий раунд!");
+    }
+
+    alert("Ваш баланс: $" + balance);
+}
+startGame();
     </script>
 </body>
 </html>
