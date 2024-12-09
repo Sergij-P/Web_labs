@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+#logoutButton {
+    margin-top: 20px;
+    background-color: #dc3545;
+}
+
+#logoutButton:hover {
+    background-color: #a71d2a;
+}
+    </style>
+</head>
+<body>
+    <h2>Список зареєстрованих користувачів</h2>
+    <ul id="userList"></ul>
+    <button id="logoutButton">Вийти</button>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+    const registerForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
+    const userList = document.getElementById('userList');
+    const logoutButton = document.getElementById('logoutButton');
+    const loadUsers = () => {
+        return JSON.parse(localStorage.getItem('users')) || [];
+    };
+    const saveUsers = (users) => {
+        localStorage.setItem('users', JSON.stringify(users));
+    };
+    if (registerForm) {
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (!username || !password) {
+                alert('Будь ласка, заповніть всі поля!');
+                return;
+            }
+            const users = loadUsers();
+            if (users.some(user => user.username === username)) {
+                alert('Користувач з таким іменем вже існує!');
+                return;
+            }
+            users.push({ username, password });
+            saveUsers(users);
+            alert('Реєстрація успішна!');
+            registerForm.reset();
+        });
+    }
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value;
+
+            const users = loadUsers();
+            const user = users.find(user => user.username === username && user.password === password);
+
+            if (!user) {
+                alert('Невірне ім\'я користувача або пароль!');
+                return;
+            }
+            localStorage.setItem('currentUser', username);
+            window.location.href = 'dashboard.html';
+        });
+    }
+    if (userList) {
+        const users = loadUsers();
+        users.forEach(user => {
+            const li = document.createElement('li');
+            li.textContent = user.username;
+            userList.appendChild(li);
+        });
+    }
+    if (logoutButton) {
+        logoutButton.addEventListener('click', () => {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        });
+    }
+});</script>
+</body>
+</html>
