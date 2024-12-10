@@ -8,7 +8,7 @@ https://sergij-p.github.io/Web_labs/lab_2/Index.html - 2 lab
 
 https://sergij-p.github.io/Web_labs/lab_3/Index.html - 3 lab
 
-https://sergij-p.github.io/Web_labs/lab_4/Index.htm - 4 lab
+https://sergij-p.github.io/Web_labs/lab_4/Index.html - 4 lab
 
 null - 5 lab
 
