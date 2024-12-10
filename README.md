@@ -1,8 +1,8 @@
-https://sergij-p.github.io/Web_labs/Lab_1/Cars/Index.html -|
+https://sergij-p.github.io/Web_labs/lab_1/Cars/Index.html -|
 
-https://sergij-p.github.io/Web_labs/Lab_1/Food/Index.html - 1 lab
+https://sergij-p.github.io/Web_labs/lab_1/Food/Index.html - 1 lab
 
-https://sergij-p.github.io/Web_labs/Lab_1/Japan/Index.html -|
+https://sergij-p.github.io/Web_labs/lab_1/Japan/Index.html -|
 
 https://sergij-p.github.io/Web_labs/lab_2/Index.html - 2 lab
 
