@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section-hero {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.hero-bg {
+    position: relative;
+    width: 450px;
+    height: 800px;
+}
+
+.hero-img {
+    width: 540px;
+    height: 800px;
+}
+
+.hero-flex {
+    display: flex;
+    justify-content: left;
+}
+
+.hero-header h1 {
+    font-size: 96px;
+    font-weight: 900;
+    width: 514px;
+}
+
+.hero-text p {
+    font-family: 'Outfit';
+    font-size: 22px;
+    font-weight: 300;
+    width: 350px;
+    padding-bottom: 64px;
+}
+
+.hero-header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 189px;
+    right: 785px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.btn-container button {
+    padding: 20px 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease;
+}
+
+
+.block_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.block_header h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.text_header {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.text_header p {
+    margin: 0;
+}
+
+.btn-container .btn-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-container .btn-img:hover {
+    transform: scale(1.1);
+}
+
+
+
+button {
+    padding: 24px 25px;
+    background-color: black;
+    color: white;
+    font-family: 'Big Shoulders Display';
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.section-gallery {
+    width: 1110px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 180px 0;
+}
+
+.gallery-info {
+    display: flex;
+    align-items: center;
+}
+
+.gallery-text {
+    width: 350px;
+    padding-right: 125px;
+}
+
+.gallery-text h1 {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.gallery-text p {
+    font-family: 'Outfit';
+    font-size: 22px;
+    font-weight: 300;
+    padding-top: 32px;
+}
+
+.gallery-img {
+    width: 640px;
+}
+
+.gallery-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.gallery-img-large {
+    width: 635px;
+    height: 720px;
+    padding-right: 30px;
+}
+
+.gallery-img-small {
+    width: 445px;
+    height: 313px;
+}
+
+.gallery-desc {
+    width: 445px;
+    height: 377px;
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+}
+
+.gallery-desc h3 {
+    font-family: 'Big Shoulders Display';
+    font-size: 60px;
+    font-weight: 900;
+    padding: 65px 48px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.footer-content h3 {
+    font-family: 'Big Shoulders Display';
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    font-family: 'Outfit';
+    font-size: 18px;
+    font-weight: 300;
+    margin: auto;
+    max-width: 600px;
+}
+
+@media (max-width: 1024px) {
+    .section-gallery {
+        width: 90%;
+    }
+
+    .gallery-info, .gallery-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gallery-text, .gallery-img {
+        padding: 0;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-img, .hero-bg {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery-img-large, .gallery-img-small {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-header {
+        right: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .btn-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    .btn-container button {
+            width: 100%;
+        }
+
+    button {
+        width: 100%;
+    }
+    .block_header {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .block_header h1 {
+        font-size: 36px;
+    }
+
+    .text_header {
+        font-size: 16px;
+    }
+}

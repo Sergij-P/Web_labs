@@ -1,0 +1,28 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.location_map {
+    background-image: url(pictures/Maps.png);
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+}
+
+.button_cust {
+    display: flex;
+    justify-content: left;
+    align-items: normal;
+    padding-left: 156px;
+}
+
+button {
+    padding: 24px 25px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
