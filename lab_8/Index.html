@@ -9,7 +9,7 @@
       margin: 0;
       padding: 20px;
     }
-    
+
     .file-manager {
       background: #fff;
       border: 1px solid #ccc;
@@ -17,25 +17,25 @@
       padding: 20px;
       width: 300px;
     }
-    
+
     h2 {
       text-align: center;
     }
-    
+
     ul {
       list-style-type: none;
       padding: 0;
     }
-    
+
     li {
       margin: 5px 0;
       cursor: pointer;
     }
-    
+
     .folder {
       font-weight: bold;
     }
-    
+
     .hidden {
       display: none;
     }
@@ -47,6 +47,15 @@
     img {
       margin-left: 10px;
       vertical-align: middle;
+      visibility: hidden;
+    }
+
+    .folder.open > img {
+      visibility: hidden;
+    }
+
+    .folder:not(.open) > img {
+      visibility: visible;
     }
   </style>
 </head>
@@ -54,25 +63,23 @@
   <div class="file-manager">
     <h2>File Manager</h2>
     <ul>
-      <li class="folder films-folder">📁 Films
-        <img id="first-img" src="folder-icon.png" alt="Folder" style="visibility: hidden;">
-        <ul id="first-ul" class="hidden">
-          <li class="folder doc-folder">📁 Fantasy
-            <img id="second-img" src="folder-icon.png" alt="Folder" style="visibility: hidden;">
-            <ul id="second-ul" class="hidden">
+      <li class="folder">
+        📁 Films
+        <ul class="hidden">
+          <li class="folder">📁 Fantasy
+            <ul class="hidden">
               <li class="file">📄 Pepsi Man!!!</li>
             </ul>
           </li>
           <li class="file">📄 Iron Man</li>
         </ul>
       </li>
-      <li class="folder detec-folder">📁 Some silly documents
-        <img id="third-img" src="folder-icon.png" alt="Folder" style="visibility: hidden;">
-        <ul id="third-ul" class="hidden">
-          <li class="file roman-folder">This folder is empty, find a job!
-            <img id="forth-img" src="folder-icon.png" alt="Folder" style="visibility: hidden;">
-            <ul id="forth-ul" class="hidden">
-              <li class="file">📄 New Document</li>
+      <li class="folder">
+        📁 Some silly documents
+        <ul class="hidden">
+          <li class="file">This folder is empty, find a job!
+            <ul class="hidden">
+              <li class="file">📄Some silly documents</li>
             </ul>
           </li>
         </ul>
@@ -81,51 +88,14 @@
   </div>
 
   <script>
-    document.querySelector(".films-folder").addEventListener("click", function() {
-      let ul = document.getElementById('first-ul');
-      let img = document.getElementById('first-img');
-      if (ul.style.display == 'block') {
-        img.style.visibility = 'visible';
-        ul.style.display = 'none';
-      } else {
-        img.style.visibility = 'hidden';
-        ul.style.display = 'block';
-      }
-    });
-
-    document.querySelector(".doc-folder").addEventListener("click", function() {
-      let ul = document.getElementById('second-ul');
-      let img = document.getElementById('second-img');
-      if (ul.style.display == 'block') {
-        img.style.visibility = 'visible';
-        ul.style.display = 'none';
-      } else {
-        img.style.visibility = 'hidden';
-        ul.style.display = 'block';
-      }
-    });
-
-    document.querySelector(".detec-folder").addEventListener("click", function() {
-      let ul = document.getElementById('third-ul');
-      let img = document.getElementById('third-img');
-      if (ul.style.display == 'block') {
-        img.style.visibility = 'visible';
-        ul.style.display = 'none';
-      } else {
-        img.style.visibility = 'hidden';
-        ul.style.display = 'block';
-      }
-    });
-
-    document.querySelector(".roman-folder").addEventListener("click", function() {
-      let ul = document.getElementById('forth-ul');
-      let img = document.getElementById('forth-img');
-      if (ul.style.display == 'block') {
-        img.style.visibility = 'visible';
-        ul.style.display = 'none';
-      } else {
-        img.style.visibility = 'hidden';
-        ul.style.display = 'block';
+    document.querySelector(".file-manager").addEventListener("click", function(event) {
+      const clickedElement = event.target.closest(".folder");
+      if (clickedElement) {
+        const childUl = clickedElement.querySelector("ul");
+        if (childUl) {
+          childUl.classList.toggle("hidden");
+          clickedElement.classList.toggle("open");
+        }
       }
     });
   </script>
