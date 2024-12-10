@@ -6,7 +6,7 @@ body{
     padding: 0px;
 }
 .header{
-    background: url(images/car-future.jpg) no-repeat center;
+    background: url "images/car-future.jpg" no-repeat center;
     background-size: cover;
     height: 700px;
 }
