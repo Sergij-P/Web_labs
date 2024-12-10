@@ -121,11 +121,16 @@ body {
     margin-bottom: 20px;
 }
 
+.featured-articles .left-image {
+    flex-direction: row;
+}
+
+.featured-articles .right-image {
+    flex-direction: row-reverse;
+}
+
 .featured-articles article img {
     width: 150px;
     height: auto;
     object-fit: cover;
 }
-
-.featured-articles article:nth-of-type(2) {
-    flex-direction: row-reverse;
