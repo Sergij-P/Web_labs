@@ -89,7 +89,7 @@ body {
 .modal-content {
     background: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 100px;
     width: 90%;
     max-width: 800px;
     text-align: center;
