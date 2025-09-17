@@ -65,7 +65,6 @@ body {
 .pokemon-card:hover {
     transform: scale(1.2);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    border-radius: 40px;
 }
 
 .pokemon-card img {
