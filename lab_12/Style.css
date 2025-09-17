@@ -83,7 +83,7 @@ body {
     justify-content: center;
     background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
-    border-radius: 40px;
+    
 }
 
 .modal-content {
@@ -92,4 +92,5 @@ body {
     width: 90%;
     max-width: 800px;
     text-align: center;
+    border-radius: 40px;
 }
