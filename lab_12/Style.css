@@ -84,13 +84,13 @@ body {
     justify-content: center;
     background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
-    border-radius: 400px;
+    border-radius: 40px;
 }
 
 .modal-content {
     background: white;
     padding: 20px;
-    border-radius: 100px;
+    border-radius: 10px;
     width: 90%;
     max-width: 800px;
     text-align: center;
