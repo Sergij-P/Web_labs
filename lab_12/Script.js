@@ -4,7 +4,7 @@ const paginationControls = document.getElementById('paginationControls');
 let allPokemon = [];
 let displayedPokemon = [];
 let currentDexPage = 1;
-const pokemonsPerPage = 25;
+const pokemonsPerPage = 15;
 const typeFilters = ['all', 'fire', 'water', 'grass', 'electric', 'rock', 'ground', 'bug', 'flying', 'psychic'];
 
 initDexFilters();
